@@ -3,8 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="in.Demo_RestAssured.HeaderMethod"/>
+      <class name="in.Demo_RestAssured.DeleteMethod"/>
       <class name="in.Demo_RestAssured.GetUserTest"/>
       <class name="in.Demo_RestAssured.SeleniumTest"/>
+      <class name="in.Demo_RestAssured.PatchMethod"/>
       <class name="in.Demo_RestAssured.CreateUserTest"/>
     </classes>
   </test> <!-- Test -->
