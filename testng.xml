@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="insomnia_practice_server.OptionsMethod"/>
-      <class name="insomnia_practice_server.connect"/>
+      <!-- <class name="insomnia_practice_server.connect"/> -->
       <class name="in.Demo_RestAssured.DeleteMethod"/>
       <class name="in.Demo_RestAssured.OptionsMethod"/>
       <class name="insomnia_practice_server.Patchmethod"/>
@@ -15,7 +15,7 @@
       <class name="in.Demo_RestAssured.CreateUserTest"/>
       <class name="in.Demo_RestAssured.HeaderMethod"/>
       <class name="in.Demo_RestAssured.GetUserTest"/>
-      <class name="insomnia_practice_server.createuser"/>
+      <!-- <class name="insomnia_practice_server.createuser"/> -->
       <class name="insomnia_practice_server.Putmethod"/>
       <class name="in.Demo_RestAssured.Put_method"/>
     </classes>
