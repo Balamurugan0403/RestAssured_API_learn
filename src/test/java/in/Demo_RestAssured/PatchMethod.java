@@ -23,6 +23,6 @@ public class PatchMethod {
 				.patch("https://jsonplaceholder.typicode.com/posts/1");
 
 		res1.prettyPrint();
-
+		
 	}
 }
