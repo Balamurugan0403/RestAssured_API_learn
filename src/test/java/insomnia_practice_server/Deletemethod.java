@@ -1,43 +1,26 @@
 package insomnia_practice_server;
 
 import org.testng.annotations.Test;
-
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
 public class Deletemethod {
 
-	@Test
-	public void delete() {
+@Test
+public void createAndDelete() {
 
-		try {
+	Map<String, Object> payload = new HashMap<>();
 
-			Response res1 = RestAssured.given().when().get("http://localhost:3000/trainees/g_slvJxLYII");
+	payload.put("name", "Temp User");
+	payload.put("email", "temp@test.com");
+	payload.put("company", "Test");
 
-			System.out.println("GET Status Code: " + res1.getStatusCode());
+	Response createResponse = RestAssured.given().contentType(ContentType.JSON).body(payload).when()
+			.post("http://localhost:3000/trainees");
+	String id = createResponse.jsonPath().getString("id");
+	System.out.println("Created ID: " + id);
+	Response deleteResponse = RestAssured.given().when().delete("http://localhost:3000/trainees/" + id);
+	deleteResponse.then().statusCode(200);
 
-			if (res1.getStatusCode() == 404) {
-
-				System.out.println("Record not found. Already deleted.");
-
-				return;
-			}
-
-			res1.prettyPrint();
-
-			Response res = RestAssured.given().when().delete("http://localhost:3000/trainees/g_slvJxLYII");
-
-			System.out.println("DELETE Status Code: " + res.getStatusCode());
-
-			res.then().statusCode(200);
-
-			System.out.println("Record deleted successfully.");
-
-		} catch (Exception e) {
-
-			System.out.println("Exception occurred: " + e.getMessage());
-
-			e.printStackTrace();
-		}
-	}
+	System.out.println("Deleted ID: " + id);
+}
 }
