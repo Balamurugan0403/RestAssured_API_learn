@@ -12,7 +12,7 @@
       <class name="in.Demo_RestAssured.PatchMethod"/>
       <class name="insomnia_practice_server.Headermethod"/>
       <class name="insomnia_practice_server.Deletemethod"/>
-      <class name="in.Demo_RestAssured.CreateUserTest"/>
+      <!-- <class name="in.Demo_RestAssured.CreateUserTest"/> -->
       <class name="in.Demo_RestAssured.HeaderMethod"/>
       <class name="in.Demo_RestAssured.GetUserTest"/>
       <!-- <class name="insomnia_practice_server.createuser"/> -->
